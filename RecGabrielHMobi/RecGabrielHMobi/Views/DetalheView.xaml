@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecGabrielHMobi.Views.DetalheView"  
+            Title="{Binding Noticias.Author}"
+             BackgroundColor="#4a245e">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="25">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="{Binding Titulo}" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                    <Label Text="{Binding Data}" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Image x:Name="photoImage" HorizontalOptions="FillAndExpand"
+                           />
+                </StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Frame HorizontalOptions="FillAndExpand" Padding="5,5,5,5" VerticalOptions="FillAndExpand">
+                        <Label Text="{Binding Texto}" TextColor="Black" VerticalOptions="FillAndExpand"/>
+                    </Frame>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

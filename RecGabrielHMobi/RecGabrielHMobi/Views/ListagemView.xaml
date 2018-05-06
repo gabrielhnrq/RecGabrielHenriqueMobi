@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecGabrielHMobi.Views.ListagemView"
+             BackgroundColor="#4a245e"
+             Title="Portal de Notícias">
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout Padding="25">
+                <ActivityIndicator
+                IsRunning="{Binding Aguarde}"
+                IsVisible="{Binding Aguarde}"
+                />
+                <ListView
+                x:Name="lstViewVeiculos"
+                ItemsSource="{Binding Noticias}"
+                SelectedItem="{Binding NoticiasSelecionado}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <Frame HorizontalOptions="FillAndExpand" Padding="5,5,5,5" VerticalOptions="FillAndExpand">
+                                        <Label Text="{Binding ResumeText}" TextColor="Black" VerticalOptions="FillAndExpand"/>
+                                    </Frame>
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
